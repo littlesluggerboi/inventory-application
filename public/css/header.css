@@ -1,0 +1,28 @@
+header{
+    border-bottom: 1px solid gainsboro;
+}
+
+nav{
+    margin: 0 1rem;
+    padding: 0.5rem 0;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo img{
+    max-width: 2rem;
+}
+
+.menu{
+    display: flex;
+    gap: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.menu a{
+    text-transform: capitalize;
+}
