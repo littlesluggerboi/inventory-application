@@ -1,0 +1,124 @@
+
+.slides_container_genre{
+    overflow: hidden;
+    overflow-x: auto;
+    padding: 0 30px;
+    position: relative;
+}
+
+.slide_show_genre{
+    margin: 0 1rem;
+    position: relative;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.slide_show_genre > button{
+    position: absolute;
+    height: 50px;
+    width: 30px;
+    top: 45%;
+    opacity: 0.5;
+    z-index: 10;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.slide_show_genre > button:hover{
+    transition: opacity 0.2s ease-in;
+    opacity: 1;
+}
+
+.slide_show_genre > p{
+    text-transform: uppercase;
+    margin: 1rem 0; 
+}
+
+.prev{
+    left: 0;
+}
+
+.next{
+    right: 0;
+}
+
+.slide_genre{
+    display: flex;
+    margin: 0.25rem 0;
+    opacity: 0;
+    min-width: fit-content;
+    gap: calc(108px/4);
+    position: absolute;
+    top: 0;
+}
+
+.selected_slide_genre{
+    position: relative;
+    transition: opacity 200ms;
+    opacity: 1;
+    z-index: 10;
+}
+
+.genre{
+    width: 200px;
+    height: 200px;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    text-transform: uppercase;
+    box-shadow: 0 0 0.25rem 0 gray;
+}
+
+.genre:hover{
+    transition: transform 0.2s ease-in;
+    transform: scale(1.02);
+}
+
+.genre img{
+    opacity: 0.8;
+    width: 100%;
+}
+
+
+.genre img:hover{
+    transition: opacity 0.2s ease-in;
+    opacity: 1;
+}
+
+.genre span{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    background-color:black;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.slide_show_navigation{
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+    gap: 5px;
+}
+
+.dot{
+    height: 10px;
+    width: 20px;
+    border-radius: 2px;
+    background-color: gainsboro;
+    border: none;
+    cursor: pointer;
+}
+
+.dotted{
+    background-color: gray;
+}

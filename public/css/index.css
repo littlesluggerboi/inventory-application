@@ -18,5 +18,9 @@ p {
 
 .container{
   max-width: 1200px;
-  margin: auto;
+  margin: auto ;
+}
+
+section.container{
+  margin: 1rem auto;
 }

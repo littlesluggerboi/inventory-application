@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="/css/genres_slide_show.css">
+<script src="/scripts/slide_show_genre.js" type="module" defer></script>
+<section class="container">
+    <div class="slide_show_genre">
+        <p>BROWSE BY GENRE</p>
+        <button class="prev">&#10094;</button>
+        <div class="slides_container_genre">
+            <%for(let i = 0; i < genres.length; i += 5){%>
+                <div class="slide_genre">
+                    <%for(let j = i; (j < i+5 && j < genres.length); j++){%>
+                        <a href="/" class="genre">
+                            <div class="gradient"></div>
+                            <span><%=genres[j].name%></span>
+                        </a>
+                    <%}%>
+                </div>
+            <%}%>
+        </div>
+        <button class="next">&#10095;</button>
+    </div>
+</section>

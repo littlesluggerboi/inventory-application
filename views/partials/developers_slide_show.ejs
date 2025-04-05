@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="/css/developers_slide_show.css">
+<script type="module" defer src="/scripts/slide_show_devs.js"></script>
+<section class="container">
+    <div class="slide_show_developer">
+        <p>EXPLORE DEVELOPERS WORK</p>
+        <button class="prev">&#10094;</button>
+        <div class="slides_container_developer">
+            <%for(let i = 0; i < developers.length; i++){%>
+                <a href="/" class="slide_developer" style="background-image: url('ttps://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2694490/3b136a89cd7b1f5cadbb8d606567c2e91eca4255/ss_3b136a89cd7b1f5cadbb8d606567c2e91eca4255.600x338.jpg?t=1743801362');">
+                    <div class="portrait">
+                        <img src="/images/cube-outline.svg" alt="developer's icon picture.">
+                    </div>
+                    <p><%=developers[i].name%></p>
+                    <p><%=developers[i].address%></p>
+                    <p><%=developers[i].email%></p>
+                    <p><%=developers[i].phone%></p>
+                </a>
+            <%}%> 
+        </div>
+        <button class="next">&#10095;</button>  
+</section>

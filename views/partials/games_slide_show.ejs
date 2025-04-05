@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="/css/games_slide_show.css">
+<script type="module" defer src="/scripts/slide_show_games.js"></script>
+<section class="container">
+    <div class="slide_show_game">
+        <p>BROWSE THROUGH GAMES</p>
+        <button class="prev">&#10094;</button>
+        <div class="slides_container_game">
+            <%for(let i = 0; i < games.length; i+=3){%>
+                <div class="slide_games">
+                    <%for(let j = i; (j < i+3 && j < games.length); j++){%>
+                        <a href="/" class="game">
+                            <div class="img_holder"></div>
+                            <div class="game_details">
+                                <p><%=games[j].name%></p>
+                                <p>Release Date: <i><%=games[j].release_date%></i></p>
+                                <p>Price: <i>$<%=games[j].price%></i></p>
+                            </div>
+                        </a>
+                    <%}%>
+                </div>
+            <%}%>
+        </div>
+        <button class="next">&#10095;</button>  
+</section>

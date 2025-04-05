@@ -1,0 +1,85 @@
+
+.slides_container_developer{
+    overflow: hidden;
+    overflow-x: auto;
+    padding: 0 30px;
+    position: relative;
+}
+
+.slide_show_developer{
+    margin: 0 1rem;
+    position: relative;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.slide_show_developer > button{
+    position: absolute;
+    height: 80px;
+    width: 30px;
+    top: 45%;
+    opacity: 0.5;
+    z-index: 10;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.slide_show_developer > button:hover{
+    transition: opacity 0.2s ease-in;
+    opacity: 1;
+}
+
+.slide_show_developer > p{
+    text-transform: uppercase;
+    margin: 1rem 0; 
+}
+
+.prev{
+    left: 0;
+}
+
+.next{
+    right: 0;
+}
+
+.slide_developer{
+    height: 400px;
+    background-color:black;
+    position: relative;
+    padding: 1rem clamp(1rem, 5vw, 5rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-decoration: none;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+}
+
+.selected_slide_developer{
+    position: relative;
+    z-index: 10;
+    opacity: 1;
+    transition: opacity 400ms;
+}
+
+.slide_developer p{
+    color: white;
+    width: fit-content;
+    padding: 0.25rem 0.5rem;
+}
+
+.slide_developer p:first-of-type{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.portrait{
+    height: 100px;
+    width: 100px;
+    background-color: white;
+}
