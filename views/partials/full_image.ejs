@@ -1,8 +1,45 @@
 <link rel="stylesheet" href="/css/full_image.css">
 <section class="full_image">
     <div class="img_container">
-        <div class="cover"></div>
-        <div class="img_sub">
+        <div class="cover">
+            <div class="cover_content">
+                <h1><%=banner.title%></h1>
+                <%if(banner.description){%>
+                    <p><%=banner.description%></p>
+                <%}%>
+                <%if(banner.game){%>
+                    <div class="authors">
+                        <span>Authored By: </span>
+                        <%banner.game.developers.map((dev, index)=>{%>
+                            <a href="/developers/<%=dev.id%>"><%=dev.name%></a>
+                            <%if(banner.game.developers.length-1 != index){%>
+                                ,
+                            <%}%>
+                        <%})%>
+                    </div>
+                    <p>Release Date: <%=banner.game.release_date%></p>
+                    <p>Price: $<%=banner.game.price%></p>
+                    <span>Genres:</span>
+                    <div class="genres">
+                        <%banner.game.genres.map((genre)=>{%>
+                            <a href="/genres/<%=genre.name%>"><%=genre.name%></a>
+                        <%})%>
+                    </div>
+                <%}%>
+                <%if(banner.dev){%>
+                    <p><%=banner.dev.address%></p>
+                    <p><%=banner.dev.phone%></p>
+                    <p><%=banner.dev.email%></p>
+                <%}%>
+                <div class="action_buttons">
+                    <%for(let i = 0; i < banner.actions.length; i++){%>
+                        <a href="<%=banner.actions[i].url%>"><%=banner.actions[i].label%>&rarr;</a>
+                    <%}%>
+                </div>
+            </div>
+        </div>
+        <div class="img_sub"
+            style="background-image: url('<%=banner.backgroundImg%>');">
         </div>
     </div>
 </section>

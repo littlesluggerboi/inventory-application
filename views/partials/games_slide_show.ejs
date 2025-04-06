@@ -8,8 +8,9 @@
             <%for(let i = 0; i < games.length; i+=3){%>
                 <div class="slide_games">
                     <%for(let j = i; (j < i+3 && j < games.length); j++){%>
-                        <a href="/" class="game">
-                            <div class="img_holder"></div>
+                        <a href="/games/<%=games[j].id%>" class="game">
+                            <div class="img_holder">
+                            </div>
                             <div class="game_details">
                                 <p><%=games[j].name%></p>
                                 <p>Release Date: <i><%=games[j].release_date%></i></p>

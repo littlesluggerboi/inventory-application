@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="/css/games_list.css">
+<section class="container">
+    <div class="games_list">
+        <%games.map((val)=>{%>
+            <a href="/games/<%=val.id%>" class="game">
+                <div class="game_img">
+                    <img src="https://img.freepik.com/free-vector/glitch-game-background_23-2148095849.jpg?t=st=1743851730~exp=1743855330~hmac=306f3d2ffdfd2d766feca6cacb155d81cb34ea3dc0b255020beb5e04125b770a&w=740"
+                        alt="">
+                </div>
+                <div class="game_details">
+                    <p><%=val.name%></p>
+                    <div class="genres">
+                        <%val.genres.map((genre)=>{%>
+                            <span><%=genre.name%></span>
+                        <%})%>
+                    </div>
+                    <p>Release Date: <%=val.release_date%></p>
+                    <p>By: 
+                        <%for(let i = 0; i < val.developers.length; i++){%>
+                            <span>
+                                <%=val.developers[i].name%>
+                            </span>
+                            <%if(i < val.developers.length -1){%>
+                                ,
+                            <%}%>
+                        <%}%>
+                    </p>
+                </div>
+                <p>Price: $<%=val.price%></p>
+            </a>    
+        <%})%>
+    </div>
+</section>

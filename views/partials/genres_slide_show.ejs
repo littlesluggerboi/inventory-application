@@ -8,7 +8,8 @@
             <%for(let i = 0; i < genres.length; i += 5){%>
                 <div class="slide_genre">
                     <%for(let j = i; (j < i+5 && j < genres.length); j++){%>
-                        <a href="/" class="genre">
+                        <a href="/genres/<%=genres[j].name%>" class="genre">
+                            <img src="https://img.freepik.com/free-vector/online-game-concept-with-different-elements_23-2148541963.jpg?t=st=1743856669~exp=1743860269~hmac=befb75e89361304de3dbfabfabc128ec6b4b736c20bc0b7ad76c26618ae83d97&w=740" alt="">
                             <div class="gradient"></div>
                             <span><%=genres[j].name%></span>
                         </a>
