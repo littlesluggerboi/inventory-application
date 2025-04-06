@@ -96,7 +96,7 @@
   color: black;
 }
 
-.genres{
+.full_image_genres{
   margin: 1rem;
   margin-bottom: 2rem;
   display: flex;
@@ -104,7 +104,7 @@
   flex-wrap: wrap;
 }
 
-.genres a{
+.full_image_genres a{
   text-decoration: none;
   text-transform: uppercase;
   padding: 0.25rem;

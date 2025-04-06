@@ -20,7 +20,7 @@
                     <p>Release Date: <%=banner.game.release_date%></p>
                     <p>Price: $<%=banner.game.price%></p>
                     <span>Genres:</span>
-                    <div class="genres">
+                    <div class="full_image_genres">
                         <%banner.game.genres.map((genre)=>{%>
                             <a href="/genres/<%=genre.name%>"><%=genre.name%></a>
                         <%})%>
