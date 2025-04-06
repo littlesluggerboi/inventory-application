@@ -76,6 +76,10 @@
     width: 100%;
     height: 250px;
     object-fit: cover;
+    background-image: url("https://img.freepik.com/free-vector/glitch-game-background_23-2148073518.jpg?t=st=1743856762~exp=1743860362~hmac=731233b9ea397a45be897a9a4ce065158686da51f5c017d2956bfa6d51d4abbd&w=740");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .game_details{

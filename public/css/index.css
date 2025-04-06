@@ -24,3 +24,8 @@ p {
 section.container{
   margin: 1rem auto;
 }
+
+.subheader{
+  text-transform: uppercase;
+  margin: 1rem;
+}

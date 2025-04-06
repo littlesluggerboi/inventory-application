@@ -1,6 +1,6 @@
 .full_image {
   background-color: rgb(0, 0, 0);
-  height: 350px;
+  /* height: 350px; */
 }
 
 .img_container {
@@ -9,20 +9,25 @@
   position: relative;
   overflow: hidden;
   display: flex;
-  height: 350px;
 }
 
-.img_container > img {
+.img_container  img {
   width: 100%;
   object-fit: cover;
+  min-height: fit-content;
 }
 
 .img_sub{
     width: 100%;
     height: 100%;
-    background-color: white;
 }
 
+.img_sub{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+}
 
 .cover {
   width: 100%;
@@ -36,4 +41,78 @@
     transparent 95%,
     rgb(0, 0, 0) 100%
   );
+  padding: 2rem;
+  display: flex;
+}
+
+.cover_content{
+  max-width: 500px;
+  color: white;
+  margin: auto;
+  margin-left: clamp(1rem, 5vw, 3rem);
+  min-width: 320px;
+}
+
+.cover_content h1{
+  font-size: clamp(2rem, 2vw, 2.5rem);
+  text-transform: capitalize;
+}
+
+.action_buttons{
+  margin: 1rem 0;
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+}
+
+.action_buttons a{
+  width: 100%;
+  padding: 0.25rem;
+  border: 1px solid black;
+  border-radius: 1rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  text-align: center;
+  text-decoration: none;
+}
+
+.action_buttons a:nth-of-type(2n-1){
+  background-color: white;
+  color: black;
+}
+
+.action_buttons a:nth-of-type(2n-1):hover{
+  background-color: black;
+  color: white; 
+}
+
+.action_buttons a:nth-of-type(2n){
+  background-color: black;
+  color: white; 
+}
+
+.action_buttons a:nth-of-type(2n):hover{
+  background-color: white;
+  color: black;
+}
+
+.genres{
+  margin: 1rem;
+  margin-bottom: 2rem;
+  display: flex;
+  gap: 0.25rem;
+  flex-wrap: wrap;
+}
+
+.genres a{
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0.25rem;
+  font-size: 0.8rem;
+  color: white;
+  background-color: #674080;
+}
+
+.genres a:hover{
+  opacity: 0.5;
 }

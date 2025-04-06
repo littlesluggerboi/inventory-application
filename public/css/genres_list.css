@@ -1,0 +1,43 @@
+.genres {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 2rem;
+}
+.genre {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  background-image: url("https://img.freepik.com/free-vector/pixel-rain-abstract-background_23-2148370435.jpg?t=st=1743911719~exp=1743915319~hmac=a76e5d364f3f5cde5548c9629d3ff74f85ceb84fad0b8bfe70754243c9551574&w=996");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.9;
+  background-color: black;
+}
+
+.genre:hover {
+  transition: all 200ms ease-in;
+  opacity: 1;
+  transform: scale(1.025);
+}
+
+.filler {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(transparent 5%, transparent 50%, black 100%);
+  padding: 1rem;
+  text-decoration: none;
+  opacity: 1;
+}
+
+.filler span {
+  text-transform: capitalize;
+  padding: 0.25rem;
+  background-color: white;
+  font-weight: 600;
+  color: black;
+}
