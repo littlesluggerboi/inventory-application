@@ -1,0 +1,47 @@
+<link rel="stylesheet" href="/css/dev_form.css">
+<script src="/scripts/checkbox_script.js" defer type="module"></script>
+<section class="container">
+    <div class="dev_form">
+        <form action=<%=form.url%> method=<%=form.method%>>
+                <fieldset>
+                    <legend>
+                        <%=form.legend%>
+                    </legend>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" value="<%=dev.name%>" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" value="<%=dev.email%>" required>
+
+                    <label for="address">Address</label>
+                    <input type="text" id="address" name="address" value="<%=dev.address%>" required>
+
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" value="<%=dev.phone%>">
+
+                    <div class="checkbox" id="checkbox1">
+                        <label>Developed Games</label>
+                        <div class="selected_boxes">
+                            <%if(dev.games){%>
+                                <%dev.games.map((game)=>{%>
+                                    <div class="selected_box" data-id="<%=game.id%>">
+                                        <input type="checkbox" name="games" value="<%=game.id%>" checked>
+                                        <label><%=game.name%></label>
+                                    </div>
+                                <%})%>
+                            <%}%>
+                        </div>
+                        <input type="text" class="dropdown" placeholder="Search Games">
+                        <div class="dropdown_content">
+                            <%games.map((game)=>{%>
+                                <p class="dropdown_item" data-id="<%=game.id%>" data-name="<%=game.name%>"><%=game.name%></p>
+                            <%})%>
+                        </div>
+                    </div>
+                    <button>
+                        <%=form.submit_label%>
+                    </button>
+                </fieldset>
+        </form>
+    </div>
+</section>

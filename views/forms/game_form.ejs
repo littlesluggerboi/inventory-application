@@ -1,0 +1,68 @@
+<link rel="stylesheet" href="/css/game_form.css">
+<script src="/scripts/game_form_script.js" defer type="module"></script>
+<section class="container">
+    <div class="game_form">
+        <form action=<%=form.url%> method=<%=form.method%>>
+                <fieldset>
+                    <legend>
+                        <%=form.legend%>
+                    </legend>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" value="<%=game.name%>" required>
+
+                    <label for="description">Description</label>
+                    <textarea name="description" id="description" rows="3" required><%=game.description%></textarea>
+
+                    <label for="release_date">Release Date</label>
+                    <input type="date" id="release_date" name="release_date" value="<%=game.release_date%>" required>
+
+                    <label for="price">Price</label>
+                    <input step="any" min="0" type="number" id="price" name="price" value="<%=game.price%>">
+                    
+                    <div class="checkbox" id="checkbox1">
+                        <label>Genre/s</label>
+                        <div class="selected_boxes">
+                            <%if(game.genres){%>
+                                <%game.genres.map((genre)=>{%>
+                                    <div class="selected_box" data-id="<%=genre.id%>">
+                                        <input type="checkbox" name="genres" value="<%=genre.id%>" checked>
+                                        <label><%=genre.name%></label>
+                                    </div>
+                                <%})%>
+                            <%}%>
+                        </div>
+                        <input type="text" class="dropdown" placeholder="Search Genres">
+                        <div class="dropdown_content">
+                            <%genres.map((genre)=>{%>
+                                <p class="dropdown_item" data-id="<%=genre.id%>" data-name="<%=genre.name%>"><%=genre.name%></p>
+                            <%})%>
+                        </div>
+                    </div>
+
+                    <div class="checkbox" id="checkbox2">
+                        <label>Developer/s</label>
+                        <div class="selected_boxes">
+                            <%if(game.developers){%>
+                                <%game.developers.map((developer)=>{%>
+                                    <div class="selected_box" data-id="<%=developer.id%>">
+                                        <input type="checkbox" name="developers" value="<%=developer.id%>" checked>
+                                        <label><%=developer.name%></label>
+                                    </div>
+                                <%})%>
+                            <%}%>
+                        </div>
+                        <input type="text" class="dropdown" placeholder="Search Developer">
+                        <div class="dropdown_content">
+                            <%developers.map((developer)=>{%>
+                                <p class="dropdown_item" data-id="<%=developer.id%>" data-name="<%=developer.name%>"><%=developer.name%></p>
+                            <%})%>
+                        </div>
+                    </div>
+
+                    <button>
+                        <%=form.submit_label%>
+                    </button>
+                </fieldset>
+        </form>
+    </div>
+</section>

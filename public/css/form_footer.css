@@ -1,0 +1,25 @@
+.other{
+    padding: 1rem;
+    background-color: black;
+}
+
+.other > .container{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.other a{
+    padding: 0.25rem;
+    background-color: white;
+    text-transform: capitalize;
+    color: black;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.other a:hover{
+    opacity: 0.9;
+    color: blue;
+}

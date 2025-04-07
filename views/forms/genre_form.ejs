@@ -1,0 +1,11 @@
+<link rel="stylesheet" href="/css/genre_form.css">
+<section class="new_genre">
+    <form action="<%=form.url%>" method="<%=form.method%>">
+        <fieldset>
+            <legend><%=form.legend%></legend>
+            <label for="name">Genre Name</label>
+            <input type="text" id="name" name="name" value="<%=genre.name%>" required>
+            <button><%=form.submit_label%></button>
+        </fieldset>
+    </form>
+</section>

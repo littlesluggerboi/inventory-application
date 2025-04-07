@@ -1,0 +1,56 @@
+.new_genre{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.new_genre form{
+    margin: 1rem;
+}
+
+
+
+.new_genre fieldset{
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    max-width: 400px;
+    display: grid;
+    margin: auto;
+}
+
+.new_genre fieldset legend{
+    font-weight: 600;
+}
+
+.new_genre fieldset input{
+    margin-bottom: 1rem;
+    appearance: none;
+    padding: 0.25rem 0.25rem;
+    border-radius: 0.25rem;
+    border: 1px solid black;
+}
+
+.new_genre fieldset input:focus, .new_genre fieldset input:active{
+    outline: none;
+    border:1px solid blue;
+}
+
+.new_genre fieldset button{
+    width: min-content;
+    margin: auto;
+    padding: 0.25rem 1rem;
+    text-transform: uppercase;
+    border: none;
+    color: white;
+    background: green;
+    border-radius: 0.25rem;
+}
+
+.new_genre fieldset button:hover{
+    opacity: 0.5;
+}
+
+.new_genre fieldset button:focus, .new_genre fieldset button:active{
+    outline-offset: 2px;
+    outline: 2px solid black;   
+}
