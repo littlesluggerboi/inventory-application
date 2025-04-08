@@ -14,39 +14,44 @@ datasource db {
 }
 
 model Developer {
-  id    Int             @id @default(autoincrement())
-  name  String          @db.VarChar(255)
-  games DeveloperGame[]
+  id      Int             @id @default(autoincrement())
+  name    String          @db.VarChar(255)
+  address String
+  email   String          @db.VarChar(255)
+  phone   String?
+  games   DeveloperGame[]
 }
 
 model Game {
   id           Int             @id @default(autoincrement())
   name         String          @db.VarChar(255)
   description  String
-  release_date DateTime
-  developer_id Int
+  release_date String
+  price        Decimal
   developers   DeveloperGame[]
-  genre        GameGenre[]
+  genres        GameGenre[]
 }
 
 model DeveloperGame {
   game_id      Int
   developer_id Int
-  game         Game      @relation(fields: [game_id], references: [id])
-  developer    Developer @relation(fields: [developer_id], references: [id])
+  game         Game      @relation(fields: [game_id], references: [id], onDelete: Cascade)
+  developer    Developer @relation(fields: [developer_id], references: [id], onDelete: Cascade)
+
   @@id([game_id, developer_id])
 }
 
 model Genre {
   id    Int         @id @default(autoincrement())
-  name  String      @db.VarChar(255)
+  name  String      @unique @db.VarChar(255)
   games GameGenre[]
 }
 
 model GameGenre {
   game_id  Int
-  game     Game  @relation(fields: [game_id], references: [id])
+  game     Game  @relation(fields: [game_id], references: [id], onDelete: Cascade)
   genre_id Int
-  genre    Genre @relation(fields: [genre_id], references: [id])
+  genre    Genre @relation(fields: [genre_id], references: [id], onDelete: Cascade)
+
   @@id([genre_id, game_id])
 }
