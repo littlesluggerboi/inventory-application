@@ -1,4 +1,4 @@
-const CheckBox = (id) => {
+const CheckBox = (id, field_name) => {
     const checkBox = document.querySelector(id);
     const searchBox = checkBox.querySelector(".dropdown");
     const options = checkBox.querySelector(".dropdown_content");
@@ -32,7 +32,7 @@ const CheckBox = (id) => {
         selectedComponent.classList.add("selected_box");
         const input = document.createElement("input");
         input.type = "checkbox";
-        input.name = "games";
+        input.name = field_name;
         input.value = id;
         input.checked = "true";
         const label = document.createElement("label");
@@ -90,6 +90,6 @@ const CheckBox = (id) => {
     }
   };
   
-  CheckBox("#checkbox1");
-  CheckBox("#checkbox2");
+  CheckBox("#checkbox1", "genres");
+  CheckBox("#checkbox2", "developers");
   
