@@ -7,11 +7,14 @@ import devsRouter from "./routes/devs_route.js";
 import dotenv from "dotenv";
 dotenv.config();
 
+const PORT = process.env.PORT || 3000;
+
 const app = express();
 app.set("views", path.join(import.meta.dirname, "views"));
 app.set("view engine", "ejs");
 app.use(express.static(path.join(import.meta.dirname, "public")));
 app.use(express.urlencoded({ extended: true }));
+
 
 
 app.use("/", indexRouter);
@@ -27,6 +30,6 @@ app.use((req, res) => {
   res.status(404).render("error_pages/404.ejs");
 });
 
-app.listen(8080, () => {
-  console.log(`listening at port: 8080`);
+app.listen(PORT, () => {
+  console.log(`listening at port: ${PORT}`);
 });
